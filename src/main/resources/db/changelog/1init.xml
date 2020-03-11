@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="" id="create_schema_export">
+        <createTable tableName="user">
+            <column name="id" type="int" autoIncrement="1">
+                <constraints primaryKey="true" primaryKeyName="user_pk"/>
+            </column>
+            <column name="name" type="varchar(50)"/>
+        </createTable>
+        <insert tableName="user">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Viktor"/>
+        </insert>
+        <insert tableName="user">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Ben"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
